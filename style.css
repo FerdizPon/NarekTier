@@ -1,0 +1,97 @@
+* {
+  user-select: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #ff5555;
+}
+
+.image-pool {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.draggable {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  cursor: grab;
+  border-radius: 5px;
+}
+
+.tier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tier-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tier-label {
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.tier-drop {
+  flex-grow: 1;
+  min-height: 100px;
+  background: #333;
+  border: 2px solid #555;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+  transition: background 0.2s;
+}
+
+.tier-drop.drag-over,
+.tier-trash.drag-over {
+  background-color: #444;
+}
+
+.tier-drop img,
+.tier-trash img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: none;
+  border-radius: 5px;
+}
+
+.tier-trash {
+  width: 100px;
+  min-height: 100px;
+  background: #222;
+  border: 2px dashed #777;
+  color: #aaa;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  transition: background 0.2s;
+}
